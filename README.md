@@ -105,7 +105,17 @@ Crea el archivo `.env` copiando el archivo de ejemplo:
 cp .env.example .env
 ```
 
-### 4. Iniciar el Servidor Local
+### 4. Migrar y Poblar la Base de Datos
+
+Ejecuta las migraciones para crear las tablas necesarias en tu base de datos:
+
+```bash
+php artisan migrate
+#El sistema preguntará si desea crear la base de datos. Seleccione 'Yes'.
+Would you like to create it? (yes/no) [yes]
+```
+
+### 5. Iniciar el Servidor Local
 
 Inicia el servidor de desarrollo de Laravel:
 
@@ -116,3 +126,17 @@ php artisan serve
 El servidor estará disponible en: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
+
+# ¿Como funciona la solución propuesta?
+
+La página cuenta con un Home sencillo que funciona como un hub desde donde se pueden explorar las demás características de la solución.
+
+La primera vez que se ingresa al sitio web, el Navbar solo mostrará el logo de la empresa (que actúa como un botón para volver al Home) y los botones de Login y Register.
+
+El flujo comienza con el registro de un nuevo usuario. Una vez completado, el sistema redirige de vuelta al Home, donde el usuario deberá iniciar sesión.
+
+Tras el inicio de sesión exitoso, el usuario será nuevamente redirigido al Home, pero esta vez, en lugar de los botones de Login y Register, el Navbar mostrará una opción de Profile. Al acceder a esta sección, se podrá visualizar la información no sensible del usuario, como el nombre, número de teléfono y correo electrónico.
+
+Además, se incluirá la opción de Logout para cerrar la sesión. Al hacerlo, el sistema redirigirá al Home, donde el usuario podrá registrar una nueva cuenta o volver a iniciar sesión con una existente.
+
+
