@@ -139,4 +139,13 @@ Tras el inicio de sesión exitoso, el usuario será nuevamente redirigido al Hom
 
 Además, se incluirá la opción de Logout para cerrar la sesión. Al hacerlo, el sistema redirigirá al Home, donde el usuario podrá registrar una nueva cuenta o volver a iniciar sesión con una existente.
 
+# TODO
+
+- [ ] Manejar mejor las variables de la API mediante un archivo `.env`
+- [ ] Configurar testers para realizar pruebas en los módulos
+- [ ] Mejorar la configuración de la base de datos
+- [ ] Mejorar la API y sus endpoints
+- [ ] Implementar JWT
+- [ ] Mejorar la lógica de la API
+- [ ] Reestructurar archivos
 
